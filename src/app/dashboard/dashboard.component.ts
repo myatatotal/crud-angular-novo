@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private api: ApiService) {}
 
+  panelOpenState = false;
+
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
       vara: [''],

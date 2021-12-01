@@ -15,7 +15,10 @@
   </div>
 </nav> -->
 
+
+
 <table class="table mt-3">
+
   <thead>
     <tr>
       <th scope="col">Código</th>
@@ -28,8 +31,10 @@
       <th scope="col">Ação</th>
     </tr>
   </thead>
+
   <tbody>
     <tr *ngFor="let employee of employees">
+
       <td>{{ employee.id }}</td>
       <td>{{ employee.vara }}</td>
       <td>{{ employee.processo }}</td>
@@ -45,13 +50,13 @@
           data-bs-target="#exampleModal"
           class="btn btn-info"
         >
-          Edit
+          Editar
         </button>
         <button
           (click)="deleteEmployee(employee.id)"
           class="btn btn-danger mx-3"
         >
-          Delete
+          Deletar
         </button>
       </td>
     </tr>
