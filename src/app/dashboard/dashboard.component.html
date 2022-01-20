@@ -1,23 +1,5 @@
-<!-- <nav class="navbar nav navbar-light bg">
-  <div class="container-fluid">
-    <h1 class="text-white"></h1>
-    <div class="d-flex">
-      <button
-        (click)="addEmployeeClick()"
-        class="btn btn-success"
-        type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Add Employee
-      </button>
-    </div>
-  </div>
-</nav> -->
 
-
-
-<table class="table mt-3">
+<!-- <table class="table mt-3">
 
   <thead>
     <tr>
@@ -31,146 +13,204 @@
       <th scope="col">Ação</th>
     </tr>
   </thead>
+</table> -->
 
-  <tbody>
-    <tr *ngFor="let employee of employees">
+<mat-card>
+  <mat-panel-title>Código</mat-panel-title>
+  <mat-panel-title>Vara</mat-panel-title>
+  <mat-panel-title>Processo</mat-panel-title>
+  <mat-panel-title>Nome</mat-panel-title>
+  <mat-panel-title>Data Ofício</mat-panel-title>
+  <mat-panel-title>Tipo de ordem</mat-panel-title>
+  <mat-panel-title>Escritório</mat-panel-title>
+  <mat-panel-title>Ação</mat-panel-title>
+</mat-card>
 
-      <td>{{ employee.id }}</td>
-      <td>{{ employee.vara }}</td>
-      <td>{{ employee.processo }}</td>
-      <td>{{ employee.nome }}</td>
-      <td>{{ employee.datas }}</td>
-      <td>{{ employee.tipo }}</td>
-      <td>{{ employee.escritorio }}</td>
-      <td>
-        <button
-          (click)="editEmployee(employee)"
-          type="button"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          class="btn btn-info"
-        >
-          Editar
-        </button>
-        <button
-          (click)="deleteEmployee(employee.id)"
-          class="btn btn-danger mx-3"
-        >
-          Deletar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+  <mat-expansion-panel hideToggle *ngFor="let employee of employees">
+    <mat-expansion-panel-header>
+
+
+      <mat-panel-title>
+        {{ employee.id }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.vara }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.processo }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.nome }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.datas }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.tipo }}
+      </mat-panel-title>
+      <mat-panel-title>
+        {{ employee.escritorio }}
+      </mat-panel-title>
+      <mat-panel-title>
         <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="formValue">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Vara </label>
-            <input
-              formControlName="vara"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Processo </label>
-            <input
-              formControlName="processo"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nome</label>
-            <input
-              formControlName="nome"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Data</label>
-            <input
-              formControlName="datas"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Tipo</label>
-            <input
-              formControlName="tipo"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Escritorio</label>
-            <input
-              formControlName="escritorio"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
+        (click)="editEmployee(employee)"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        mat-button color="primary"
+      >
+        Editar
+      </button>
         <button
-          id="cancel"
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
-        <button
-          *ngIf="!isEditing"
-          (click)="createEmployee()"
-          type="button"
-          class="btn btn-primary"
-        >
-          Add
-        </button>
-        <button
-          *ngIf="isEditing"
-          (click)="updateEmployee()"
-          type="button"
-          class="btn btn-primary"
-        >
-          Update
-        </button>
+        (click)="deleteEmployee(employee.id)"
+        mat-button color="accent"
+      >
+        Deletar
+      </button>
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    <mat-expansion-panel-body>
+      <ng-template matExpansionPanelContent>
+        <div class="contentPanel">{{ employee.subclasse.NovaVara }}</div>
+        <div class="contentPanel">{{ employee.subclasse.NovoProcesso }}</div>
+        <div class="contentPanel">{{ employee.subclasse.NovoNome }}</div>
+        <div class="contentPanel">{{ employee.subclasse.TipoPlano }}</div>
+        <div class="contentPanel">{{ employee.subclasse.NumeroMatricula }}</div>
+        <div class="contentPanel">{{ employee.subclasse.DataConsulta }}</div>
+        <div class="contentPanel">{{ employee.subclasse.SaldoPlano }}</div>
+        <div class="contentPanel">{{ employee.subclasse.DataNascimentoParticipante }}</div>
+        <div class="contentPanel">{{ employee.subclasse.NomeResponsavelFinanceiro }}</div>
+        <div class="contentPanel">{{ employee.subclasse.CPFResposavelFinanceiro }}</div>
+        <div class="contentPanel">{{ employee.subclasse.SituacaoPlano }}</div>
+      </ng-template>
+    </mat-expansion-panel-body>
+
+  </mat-expansion-panel>
+
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Vara </label>
+              <input
+                formControlName="vara"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Processo </label>
+              <input
+                formControlName="processo"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nome</label>
+              <input
+                formControlName="nome"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Data</label>
+              <input
+                formControlName="datas"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Tipo</label>
+              <input
+                formControlName="tipo"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Escritorio</label>
+              <input
+                formControlName="escritorio"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Novo Processo</label>
+              <input
+                formControlName="NovoProcesso"
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            id="cancel"
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            *ngIf="!isEditing"
+            (click)="createEmployee()"
+            type="button"
+            class="btn btn-primary"
+          >
+            Add
+          </button>
+          <button
+            *ngIf="isEditing"
+            (click)="updateEmployee()"
+            type="button"
+            class="btn btn-primary"
+          >
+            Update
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+
+

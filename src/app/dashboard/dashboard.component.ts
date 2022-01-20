@@ -27,6 +27,18 @@ export class DashboardComponent implements OnInit {
       datas: [''],
       tipo: [''],
       escritorio: [''],
+      subclasse: [''],
+      NovaVara: [''],
+      NovoProcesso: [''],
+      NovoNome: [''],
+      TipoPlano: [''],
+      NumeroMatricula: [''],
+      DataConsulta: [''],
+      SaldoPlano: [''],
+      DataNascimentoParticipante: [''],
+      NomeResponsavelFinanceiro: [''],
+      CPFResposavelFinanceiro: [''],
+      SituacaoPlano: [''],
     });
     this.getAllEmployees();
   }
@@ -49,6 +61,18 @@ export class DashboardComponent implements OnInit {
     this.employeeModelObj.datas = this.formValue.value.datas;
     this.employeeModelObj.tipo = this.formValue.value.tipo;
     this.employeeModelObj.escritorio = this.formValue.value.escritorio;
+    this.employeeModelObj.subclasse = this.formValue.value.subclasse;
+    this.employeeModelObj.NovaVara = this.formValue.value.NovaVara;
+    this.employeeModelObj.NovoProcesso = this.formValue.value.NovoProcesso;
+    this.employeeModelObj.NovoNome = this.formValue.value.NovoNome;
+    this.employeeModelObj.TipoPlano = this.formValue.value.TipoPlano;
+    this.employeeModelObj.NumeroMatricula = this.formValue.value.NumeroMatricula;
+    this.employeeModelObj.DataConsulta = this.formValue.value.DataConsulta;
+    this.employeeModelObj.SaldoPlano = this.formValue.value.SaldoPlano;
+    this.employeeModelObj.DataNascimentoParticipante = this.formValue.value.DataNascimentoParticipante;
+    this.employeeModelObj.NomeResponsavelFinanceiro = this.formValue.value.NomeResponsavelFinanceiro;
+    this.employeeModelObj.CPFResposavelFinanceiro = this.formValue.value.CPFResposavelFinanceiro;
+    this.employeeModelObj.SituacaoPlano = this.formValue.value.SituacaoPlano;
     this.api.create(this.employeeModelObj).subscribe(
       (rest) => {
         this.closeModal();
@@ -83,6 +107,18 @@ export class DashboardComponent implements OnInit {
     this.formValue.controls['datas'].setValue(employee.datas);
     this.formValue.controls['tipo'].setValue(employee.tipo);
     this.formValue.controls['escritorio'].setValue(employee.escritorio);
+    this.formValue.controls['subclasse'].setValue(employee.subclasse);
+    this.formValue.controls['NovaVara'].setValue(employee.NovaVara);
+    this.formValue.controls['NovoProcesso'].setValue(employee.NovoProcesso);
+    this.formValue.controls['NovoNome'].setValue(employee.NovoNome);
+    this.formValue.controls['TipoPlano'].setValue(employee.TipoPlano);
+    this.formValue.controls['NumeroMatricula'].setValue(employee.NumeroMatricula);
+    this.formValue.controls['DataConsulta'].setValue(employee.DataConsulta);
+    this.formValue.controls['SaldoPlano'].setValue(employee.SaldoPlano);
+    this.formValue.controls['DataNascimentoParticipante'].setValue(employee.DataNascimentoParticipante);
+    this.formValue.controls['NomeResponsavelFinanceiro'].setValue(employee.NomeResponsavelFinanceiro);
+    this.formValue.controls['CPFResposavelFinanceiro'].setValue(employee.CPFResposavelFinanceiro);
+    this.formValue.controls['SituacaoPlano'].setValue(employee.SituacaoPlano);
   }
 
   updateEmployee() {
@@ -92,6 +128,18 @@ export class DashboardComponent implements OnInit {
     this.employeeModelObj.datas = this.formValue.value.datas;
     this.employeeModelObj.tipo = this.formValue.value.tipo;
     this.employeeModelObj.escritorio = this.formValue.value.escritorio;
+    this.employeeModelObj.subclasse = this.formValue.value.subclasse;
+    this.employeeModelObj.NovaVara = this.formValue.value.NovaVara;
+    this.employeeModelObj.NovoProcesso = this.formValue.value.NovoProcesso;
+    this.employeeModelObj.NovoNome = this.formValue.value.NovoNome;
+    this.employeeModelObj.TipoPlano = this.formValue.value.TipoPlano;
+    this.employeeModelObj.NumeroMatricula = this.formValue.value.NumeroMatricula;
+    this.employeeModelObj.DataConsulta = this.formValue.value.DataConsulta;
+    this.employeeModelObj.SaldoPlano = this.formValue.value.SaldoPlano;
+    this.employeeModelObj.DataNascimentoParticipante = this.formValue.value.DataNascimentoParticipante;
+    this.employeeModelObj.NomeResponsavelFinanceiro = this.formValue.value.NomeResponsavelFinanceiro;
+    this.employeeModelObj.CPFResposavelFinanceiro = this.formValue.value.CPFResposavelFinanceiro;
+    this.employeeModelObj.SituacaoPlano = this.formValue.value.SituacaoPlano;
     this.api
       .update(this.employeeModelObj.id, this.employeeModelObj)
       .subscribe((resp) => {

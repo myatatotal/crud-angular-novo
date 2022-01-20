@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "vara": "22478968813",
+      "processo": "123",
+      "nome": "bionico",
+      "datas": "11061982",
+      "tipo": "789",
+      "escritorio": "1"
+    },
+    {
+      "id": 2,
+      "vara": "22478968813",
+      "processo": "123",
+      "nome": "bionico",
+      "datas": "11061982",
+      "tipo": "789",
+      "escritorio": "1"
+    },
+    {
+      "id": 3,
+      "vara": "22478968813",
+      "processo": "123",
+      "nome": "bionico",
+      "datas": "11061982",
+      "tipo": "789",
+      "escritorio": "1"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

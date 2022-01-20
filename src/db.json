@@ -9,9 +9,9 @@
       "tipo": "Bloqueio",
       "escritorio": "Escritório 1",
       "subclasse": {
-        "vara": "Pessoa Física",
-        "processo": "7854786677-66",
-        "nome": "Guedes Neves",
+        "NovaVara": "Pessoa Física",
+        "NovoProcesso": "7854786677-66",
+        "NovoNome": "Guedes Neves",
         "TipoPlano": "PGBL",
         "NumeroMatricula": "001121",
         "DataConsulta": "20/04/2021",
@@ -29,7 +29,20 @@
       "nome": "VBL Ltda ME",
       "datas": "11/09/1988",
       "tipo": "Bloqueio",
-      "escritorio": "Escritório 2"
+      "escritorio": "Escritório 2",
+      "subclasse": {
+        "NovaVara": "Pessoa Física",
+        "NovoProcesso": "7854786677-66",
+        "NovoNome": "Guedes Neves",
+        "TipoPlano": "PGBL",
+        "NumeroMatricula": "001121",
+        "DataConsulta": "20/04/2021",
+        "SaldoPlano": "R$ 1.520,00",
+        "DataNascimentoParticipante": "20/09/2021",
+        "NomeResponsavelFinanceiro": "Otero Neves",
+        "CPFResposavelFinanceiro": "558789366-12",
+        "SituacaoPlano": "Ativo"
+      }
     },
     {
       "id": 3,
@@ -38,9 +51,20 @@
       "nome": "Pereira Vicente",
       "datas": "11/09/1988",
       "tipo": "Bloqueio",
-      "escritorio": "Escritório 3"
+      "escritorio": "Escritório 3",
+      "subclasse": {
+        "NovaVara": "Pessoa Física",
+        "NovoProcesso": "7854786677-66",
+        "NovoNome": "Guedes Neves",
+        "TipoPlano": "PGBL",
+        "NumeroMatricula": "001121",
+        "DataConsulta": "20/04/2021",
+        "SaldoPlano": "R$ 1.520,00",
+        "DataNascimentoParticipante": "20/09/2021",
+        "NomeResponsavelFinanceiro": "Otero Neves",
+        "CPFResposavelFinanceiro": "558789366-12",
+        "SituacaoPlano": "Ativo"
+      }
     }
-  ],
-  "comments": [],
-  "profile": {}
+  ]
 }
