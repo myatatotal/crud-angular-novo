@@ -1,0 +1,110 @@
+<!-- <div
+  class=""
+  id="exampleModal"
+>
+  <div class="modal-dialog">
+    <div class="modal-content"> -->
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div> -->
+      <!-- <div class="modal-body"> -->
+    <div class="container">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nome</label>
+            <input required
+              formControlName="nome"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Qual o número do CPF ou CNPJ dessa pessoa? </label>
+            <input required
+              formControlName="vara"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Processo </label>
+            <input required
+              formControlName="processo"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Data</label>
+            <input required
+              formControlName="datas"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Tipo</label>
+            <input required
+              formControlName="tipo"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Escritorio</label>
+            <input required
+              formControlName="escritorio"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+        </form>
+      <!-- </div> -->
+      <div class="modal-footer">
+        <!-- <button
+          id="cancel"
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button> -->
+        <button
+          *ngIf="!isEditing"
+          (click)="createEmployee()"
+          type="button"
+          class="btn btn-primary"
+        >
+          Enviar
+        </button>
+        <button
+          *ngIf="isEditing"
+          (click)="updateEmployee()"
+          type="button"
+          class="btn btn-primary"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+    <!-- </div>
+  </div>
+</div> -->
